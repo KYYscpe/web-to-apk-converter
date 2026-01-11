@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "backend/main.go",
+      "use": "@vercel/go"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/convert",
+      "dest": "backend/main.go"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/index.html"
+    }
+  ]
+}
