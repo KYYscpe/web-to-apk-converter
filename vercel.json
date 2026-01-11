@@ -7,12 +7,12 @@
   ],
   "routes": [
     {
-      "src": "/api/convert",
-      "dest": "backend/main.go"
+      "src": "/api/(.*)",
+      "dest": "/backend/main.go"
     },
     {
       "src": "/(.*)",
-      "dest": "frontend/index.html"
+      "dest": "/backend/main.go"
     }
   ]
 }
